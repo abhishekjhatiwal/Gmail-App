@@ -2,6 +2,7 @@ package com.example.gmailapp.presentation.emaildetail.mvi
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.gmailapp.core.funtational.fold
 import com.example.gmailapp.core_ui.funtational.stateInWhileActive
 import com.example.gmailapp.domain.usecase.EmailDetailsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

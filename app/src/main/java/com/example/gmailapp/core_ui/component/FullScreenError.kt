@@ -17,6 +17,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.gmailapp.R
+import com.example.gmailapp.ui.theme.Dimensions
 
 @Composable
 fun FullScreenError(

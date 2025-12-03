@@ -43,11 +43,9 @@ fun DetailsAppBar(
     var parentWidth by remember { mutableIntStateOf(0) }
 
     Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .onPlaced {
-                parentWidth = it.size.width
-            },
+        modifier = modifier.fillMaxWidth().onPlaced {
+            parentWidth = it.size.width
+        },
         verticalAlignment = Alignment.CenterVertically
     ) {
         IconButton(onClick = { navController.popBackStack() }) {
@@ -77,12 +75,12 @@ fun DetailsAppBar(
             offset = DpOffset(offsetX, Dimensions.none)
         ) {
             getDropDownMenuList().forEach {
-//                DropdownMenuItem(
-//                    text = {
-//                        Text(it.title)
-//                    },
-//                    onClick = { it.onClick() }
-//                )
+                DropdownMenuItem(
+                    text = {
+                        Text(it.title)
+                    },
+                    onClick = { it.onClick() }
+                )
             }
         }
     }

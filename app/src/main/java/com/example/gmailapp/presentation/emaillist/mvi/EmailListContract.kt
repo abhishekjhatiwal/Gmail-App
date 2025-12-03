@@ -1,5 +1,9 @@
 package com.example.gmailapp.presentation.emaillist.mvi
 
+import com.example.gmailapp.core.error.Failure
+import com.example.gmailapp.core_ui.mvi.MVIContract
+import com.example.gmailapp.domain.model.emaillist.EmailListItemModel
+
 interface EmailListContract :
     MVIContract<EmailListContract.EmailListState, EmailListContract.EmailListEffect, EmailListContract.EmailListEvent> {
 

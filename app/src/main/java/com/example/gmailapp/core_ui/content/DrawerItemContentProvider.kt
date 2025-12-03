@@ -17,6 +17,7 @@ import androidx.compose.material.icons.filled.Outbox
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Snooze
 import androidx.compose.material.icons.filled.Star
+import com.example.gmailapp.core_ui.uimodel.DrawerData
 
 fun getDrawerItemsList() =
     listOf(

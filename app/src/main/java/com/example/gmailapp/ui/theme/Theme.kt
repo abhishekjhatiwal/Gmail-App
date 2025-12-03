@@ -68,4 +68,5 @@ object Dimensions {
     val dimen_32 = 32.dp
     val dimen_40 = 40.dp
     val dimen_48 = 48.dp
+    val dimen_64 = 64.dp
 }

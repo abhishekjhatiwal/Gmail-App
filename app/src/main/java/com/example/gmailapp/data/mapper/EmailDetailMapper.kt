@@ -1,9 +1,21 @@
 package com.example.gmailapp.data.mapper
 
+import com.example.gmailapp.core.funtational.mapOrDefault
+import com.example.gmailapp.core.funtational.orDefault
+import com.example.gmailapp.core.mapper.ResultMapper
+import com.example.gmailapp.data.dto.emaildetail.EmailDetailsDto
+import com.example.gmailapp.data.dto.emaildetail.RecipientInfo
+import com.example.gmailapp.data.dto.emaildetail.SenderInfo
+import com.example.gmailapp.domain.model.emaildetail.EmailDetailsModel
+import com.example.gmailapp.domain.model.emaildetail.FileInfo
+import com.example.gmailapp.domain.model.emaildetail.RecipientModel
+import com.example.gmailapp.domain.model.emaildetail.SenderInfoModel
 import javax.inject.Inject
 
-class EmailDetailsMapper @Inject constructor() : ResultMapper<ArrayList<EmailDetailsDto>, EmailDetailsModel> {
-    override fun map(input: ArrayList<EmailDetailsDto>): EmailDetailsModel = input.first().toEmailDetailsModel()
+class EmailDetailsMapper @Inject constructor() :
+    ResultMapper<ArrayList<EmailDetailsDto>, EmailDetailsModel> {
+    override fun map(input: ArrayList<EmailDetailsDto>): EmailDetailsModel =
+        input.first().toEmailDetailsModel()
 
     private fun EmailDetailsDto.toEmailDetailsModel(): EmailDetailsModel {
         return EmailDetailsModel(

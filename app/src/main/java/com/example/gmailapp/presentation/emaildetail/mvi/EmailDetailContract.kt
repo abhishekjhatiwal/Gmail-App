@@ -1,5 +1,8 @@
 package com.example.gmailapp.presentation.emaildetail.mvi
 
+import com.example.gmailapp.core_ui.mvi.MVIContract
+import com.example.gmailapp.domain.model.emaildetail.EmailDetailsModel
+
 interface EmailDetailsContract : MVIContract<
         EmailDetailsContract.UIState,
         EmailDetailsContract.EmailDetailsEffect,

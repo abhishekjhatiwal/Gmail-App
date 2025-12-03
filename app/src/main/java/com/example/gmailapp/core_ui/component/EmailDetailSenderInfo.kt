@@ -22,6 +22,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import com.example.gmailapp.R
+import com.example.gmailapp.ui.theme.Dimensions
 
 @Composable
 fun EmailDetailsSenderInfo(
@@ -137,7 +139,7 @@ fun EmailDetailsSenderInfoPreview() {
 fun NonPromotionalEmailDetailsSenderInfoPreview() {
     Surface {
         EmailDetailsSenderInfo(
-            profileImageUrl = "https://i.pravatar.cc/250?img=5",
+            profileImageUrl = "https://www.google.com/imgres?q=abhishek%20jhatiwal&imgurl=https%3A%2F%2Flookaside.instagram.com%2Fseo%2Fgoogle_widget%2Fcrawler%2F%3Fmedia_id%3D3304824501320987503&imgrefurl=https%3A%2F%2Fwww.instagram.com%2Fabhishek_jhatiwal%2F&docid=dAngQfQPbygObM&tbnid=grDqZWGZqzSjeM&vet=12ahUKEwiLtZLr1aGRAxXPSWwGHTcmLLYQM3oECBEQAA..i&w=1440&h=1440&hcb=2&ved=2ahUKEwiLtZLr1aGRAxXPSWwGHTcmLLYQM3oECBEQAA",
             isPromotional = false,
             from = "CoroutineLab"
         )

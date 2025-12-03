@@ -1,5 +1,7 @@
 package com.example.gmailapp.data.di
 
+import com.example.gmailapp.data.remote.api.ApiService
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -8,8 +8,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import com.example.gmailapp.core.error.getErrorMessage
+import com.example.gmailapp.core_ui.component.EmailItem
 import com.example.gmailapp.core_ui.component.FullScreenError
 import com.example.gmailapp.core_ui.component.LinearFullScreenProgress
+import com.example.gmailapp.core_ui.funtational.toFormattedDate
+import com.example.gmailapp.presentation.emaillist.mvi.EmailListContract
+import com.example.gmailapp.ui.theme.Dimensions
 
 @Composable
 fun EmailListScreen(state: EmailListContract.EmailListState, dispatch: (EmailListContract.EmailListEvent) -> Unit) {

@@ -31,6 +31,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.viewinterop.AndroidView
+import com.example.gmailapp.core_ui.component.EmailDetailsBottomSection
+import com.example.gmailapp.core_ui.component.EmailDetailsSenderInfo
+import com.example.gmailapp.core_ui.component.EmailDetailsSubject
+import com.example.gmailapp.core_ui.component.FullScreenError
+import com.example.gmailapp.core_ui.component.LinearFullScreenProgress
+import com.example.gmailapp.domain.model.emaildetail.EmailDetailsModel
+import com.example.gmailapp.presentation.emaildetail.mvi.EmailDetailsContract
+import com.example.gmailapp.ui.theme.Dimensions
 
 @Composable
 fun EmailDetailsScreen(

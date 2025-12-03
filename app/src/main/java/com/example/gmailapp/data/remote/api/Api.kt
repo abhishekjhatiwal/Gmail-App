@@ -1,5 +1,7 @@
 package com.example.gmailapp.data.remote.api
 
+import com.example.gmailapp.data.dto.emaildetail.EmailDetailsDto
+import com.example.gmailapp.data.dto.emaillist.EmailListItemDto
 import retrofit2.Response
 import retrofit2.http.GET
 

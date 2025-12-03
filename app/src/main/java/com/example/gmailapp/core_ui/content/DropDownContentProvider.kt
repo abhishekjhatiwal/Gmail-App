@@ -1,5 +1,7 @@
 package com.example.gmailapp.core_ui.content
 
+import com.example.gmailapp.core_ui.uimodel.DropDownMenuItem
+
 fun getDropDownMenuList() =
     listOf(
         DropDownMenuItem(title = "Move to") {},

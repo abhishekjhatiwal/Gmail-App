@@ -1,16 +1,35 @@
 package com.example.gmailapp.data.remote.handler
 
-import retrofit2.HttpException
-import java.io.IOException
+import com.example.gmailapp.core.error.Failure
+import com.example.gmailapp.core.funtational.Enter
+import com.example.gmailapp.core.mapper.ResultMapper
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import retrofit2.Response
 
-fun Throwable.toEither(): Either<Failure, Nothing> {
-    return when (this) {
-        is IOException -> Either.Left(Failure.NetworkError(this))
-        is HttpException -> {
-            val code = code()
-            val message = message()
-            Either.Left(Failure.ServerError(code, message))
+suspend fun <T, R> safeApiCall(
+    ioDispatcher: CoroutineDispatcher = Dispatchers.IO,
+    apiCall: suspend () -> Response<T>,
+    mapper: ResultMapper<T, R>
+): Enter<Failure, R> {
+    return withContext(ioDispatcher) {
+        runCatching {
+            val response = apiCall()
+            if (response.isSuccessful) {
+                response.body()?.let {
+                    Enter.Right(mapper.map(it))
+                } ?: Enter.Left(
+                    Failure.ServerError(
+                        code = response.code(),
+                        message = response.message()
+                    )
+                )
+            } else {
+                Enter.Left(Failure.ServerError(response.code(), response.message()))
+            }
         }
-        else -> Either.Left(Failure.UnknownError(this))
+    }.getOrElse {
+        it.toEither()
     }
 }

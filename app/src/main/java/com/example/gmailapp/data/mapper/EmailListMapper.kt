@@ -2,7 +2,9 @@ package com.example.gmailapp.data.mapper
 
 import com.example.gmailapp.core.funtational.orDefault
 import com.example.gmailapp.core.mapper.ResultMapper
+import com.example.gmailapp.data.dto.emaildetail.Payload
 import com.example.gmailapp.data.dto.emaillist.EmailListItemDto
+import com.example.gmailapp.domain.model.emaillist.EmailListItemModel
 import javax.inject.Inject
 
 class EmailListMapper @Inject constructor() :

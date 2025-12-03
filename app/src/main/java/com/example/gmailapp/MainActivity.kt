@@ -11,6 +11,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Videocam
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.DrawerValue
@@ -34,6 +38,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -55,6 +60,7 @@ import com.example.gmailapp.presentation.emaildetail.mvi.EmailDetailsViewModel
 import com.example.gmailapp.presentation.emaillist.EmailListScreen
 import com.example.gmailapp.presentation.emaillist.mvi.EmailListContract
 import com.example.gmailapp.presentation.emaillist.mvi.EmailListViewModel
+import com.example.gmailapp.ui.theme.Dimensions
 import com.example.gmailapp.ui.theme.GmailAppTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch

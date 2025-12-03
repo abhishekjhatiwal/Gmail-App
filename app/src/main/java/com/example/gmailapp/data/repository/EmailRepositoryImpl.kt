@@ -5,6 +5,9 @@ import com.example.gmailapp.core.funtational.Enter
 import com.example.gmailapp.data.mapper.EmailDetailsMapper
 import com.example.gmailapp.data.mapper.EmailListMapper
 import com.example.gmailapp.data.remote.api.ApiService
+import com.example.gmailapp.data.remote.handler.safeApiCall
+import com.example.gmailapp.domain.model.emaillist.EmailListItemModel
+import com.example.gmailapp.domain.repository.EmailRepository
 import javax.inject.Inject
 
 class EmailRepositoryImpl @Inject constructor(
