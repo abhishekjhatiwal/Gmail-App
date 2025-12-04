@@ -1,6 +1,5 @@
 package com.example.gmailapp.data.dto.emaillist
 
-import com.example.gmailapp.data.dto.emaildetail.Payload
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

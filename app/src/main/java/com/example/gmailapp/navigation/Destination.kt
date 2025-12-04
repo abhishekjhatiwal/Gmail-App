@@ -5,6 +5,11 @@ import kotlinx.serialization.Serializable
 @Serializable
 object EmailList
 
+//@Serializable
+//data class EmailList(
+//    val dummy: String = ""   // no real args, just to satisfy serialization
+//)
+
 @Serializable
 data class EmailDetails(
     val from :String,
